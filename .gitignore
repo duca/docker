@@ -1,0 +1,17 @@
+.#*
+*.*~
+*.pyc
+env
+*/db/*
+*~
+*#
+*.bak
+*.tmp
+*.aux
+*.nav
+*.toc
+*.lot
+*.lof
+*.out
+*.log
+*.snm

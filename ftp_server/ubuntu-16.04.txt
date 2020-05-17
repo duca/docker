@@ -1,0 +1,23 @@
+# /etc/apt/sources.list
+# vim:set ft=debsources:
+#
+# To fix the GPG warnings at the end of the `apt-get update` command, please
+# run:
+#
+#   $ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys \
+#     084ECFC5828AB726 409C8B51283EC8CD 83FBA1751378B444 C2518248EEA14886 \
+#     7CDE3A860A53F9FD 8CF63AD3F06FC659 F76221572C52609D 9B7D32F2D50582E6
+
+deb [arch=amd64] http://apt.bradar.com.br/ubuntu-cmake3x xenial main
+deb [arch=amd64] http://apt.bradar.com.br/ubuntu-java xenial main
+deb [arch=amd64] http://apt.bradar.com.br/ubuntu-simplescreenrecorder xenial main
+deb [arch=amd64] http://apt.bradar.com.br/ubuntu-x2go xenial main
+deb [arch=amd64] http://apt.bradar.com.br/ubuntu-xenial-texlive-2017 xenial main
+deb http://apt.bradar.com.br/docker ubuntu-xenial main
+deb http://apt.bradar.com.br/ubuntu-jenkins binary/
+deb http://apt.bradar.com.br/ubuntu-libreoffice50 xenial main
+deb http://apt.bradar.com.br/ubuntu xenial-backports main restricted universe multiverse
+deb http://apt.bradar.com.br/ubuntu xenial main restricted universe multiverse
+deb http://apt.bradar.com.br/ubuntu xenial-proposed main restricted universe multiverse
+deb http://apt.bradar.com.br/ubuntu xenial-security main restricted universe multiverse
+deb http://apt.bradar.com.br/ubuntu xenial-updates main restricted universe multiverse

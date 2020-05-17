@@ -1,0 +1,6 @@
+# UI
+gtk2-devel >= 2.24.11
+glib-devel >= 1.2
+# Images
+giflib-devel >= 4.1
+giflib >= 4.1

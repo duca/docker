@@ -1,0 +1,9 @@
+{
+  "bip": "172.42.0.42/16",
+  "log-level": "warn",
+  "log-driver": "json-file",
+  "log-opts": {
+    "max-size": "10m",
+    "max-file": "5"
+  }
+}

@@ -1,0 +1,30 @@
+# not working
+version: "3.4"
+services:
+  centos_base:
+    image: "dev:centos7"
+    build:
+      context: base/
+      network: host
+    ports:
+      - "9022:22"
+    expose:
+      - "22"
+    volumes:
+        - ~/work:/home/centos/work
+        - /opt/Qt:/opt/Qt/
+  emacs:
+    image: "dev:centos7_emacs"
+    depends_on:
+      - centos_base
+    build:
+       context: emacs/
+       network: host
+    ports:
+      - "9022:22"
+    expose:
+      - "22"
+    volumes:
+      - ~/work:/home/centos/work
+      - /opt/Qt:/opt/Qt/
+      - ~/usr/emacs_config/:/home/centos/usr/emacs_config

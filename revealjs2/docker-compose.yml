@@ -1,0 +1,16 @@
+version: '2.0'
+services:
+  reveal:
+    image: parente/revealjs
+    container_name: reveal2
+    ports:
+      - "8000:8000"
+    expose:
+      - "8000"
+    volumes:
+      - "./slides:/revealjs/md"
+      - "./images:/revealjs/images"
+      - "./html/index.html:/revealjs/index.html"
+      - "./css/custom.css:/revealjs/css/custom.css"
+
+      # https://hub.docker.com/r/danidemi/docker-reveal.js/

@@ -1,0 +1,18 @@
+version: '2.0'
+services:
+  mysql:
+    image: mysql
+    container_name: sonar
+    ports:
+      - "3306:3306"
+      - "8889:8889"
+    expose:
+      - "3306"
+    environment:
+      MYSQL_DATABASE: sonarcinco
+      MYSQL_USER: ubuntu
+      MYSQL_PASSWORD: Ubuntu**00
+      MYSQL_ROOT_PASSWORD: root123
+    volumes:
+      - "/home/elopes/work/docker/mysql/db:/var/lib/mysql"
+    command: mysqld --character-set-server=utf8 --collation-server=utf8_unicode_ci --init-connect='SET NAMES UTF8;' --innodb-flush-log-at-trx-commit=0

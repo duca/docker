@@ -1,0 +1,17 @@
+version: "2"
+services:
+  pandoc:
+    image: pandoc
+    restart: always
+    build: .
+    volumes:
+      - ./data:/source    
+
+    # a unica referencia que funcionou decentemente
+# https://www.digitalocean.com/community/tutorials/how-to-set-up-a-private-docker-registry-on-ubuntu-14-04
+# Lista de configuracoes possiveis
+# https://docs.docker.com/registry/configuration/#list-of-configuration-options
+# Tutorial pra montar um repositorio local
+# https://docs.docker.com/registry/deploying/#run-a-local-registryl
+
+

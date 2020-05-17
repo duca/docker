@@ -1,0 +1,15 @@
+# version: "3.4"
+# services:
+  neo4j:
+    image: tpires/neo4j
+#    build: .
+    env_file: .env
+    cap_add:
+      - SYS_RESOURCE
+    ports:
+      - "7474:7474"
+    expose:
+      - "7474"
+    volumes:
+      - /home/eduardo/Documentos/apresentacoes/docker/docker-neo4j/data:/var/lib/neo4j/data
+      - /home/eduardo/Documentos/apresentacoes/docker/docker-neo4j/tmp:/root/tmp
