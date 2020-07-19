@@ -1,4 +1,4 @@
-FROM opensuse/leap
+FROM opensuse/tumbleweed
 
 MAINTAINER Eduardo Lopes <elopes1@oceaneering.com>
 
