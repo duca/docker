@@ -15,5 +15,6 @@ xauth nlist ${DISPLAY} | sed -e 's/^..../ffff/' | xauth -f ${XAUTH} nmerge - &&\
 	   -v ${XAUTH}:${XAUTH}:Z \
 	   -v ${XSOCK}:${XSOCK}:Z \
            -v $PWD/data:/source \
+	   -v ${HOME}/apps:/apps \
 	   --privileged --cap-add=ALL \
-	   opensuse/texlive
+	   opensuse/tumbleweed

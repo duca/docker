@@ -8,11 +8,7 @@ xauth nlist ${DISPLAY} | sed -e 's/^..../ffff/' | xauth -f $XAUTH nmerge -
 xauth nlist ${DISPLAY} | sed -e 's/^..../ffff/' | xauth -f ${XAUTH} nmerge - &&\
     docker run --rm \
            -it\
-	   --network=host \
 	   -m 20G \
-	   -e DISPLAY=${DISPLAY} \
 	   -e LC_ALL=en_US.utf8 \
-	   -v ${XAUTH}:${XAUTH}:Z \
-	   -v ${XSOCK}:${XSOCK}:Z \
            -v $PWD/data:/source \
 	   tex_texlive
