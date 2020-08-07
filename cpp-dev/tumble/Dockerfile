@@ -1,6 +1,6 @@
 FROM opensuse/tumbleweed
 
-MAINTAINER Eduardo Lopes <elopes1@oceaneering.com>
+MAINTAINER Eduardo Lopes <edumlopes@gmail.com>
 
 ########################################################################
 # Installing repos
@@ -24,15 +24,14 @@ RUN cat /root/mono_packages.dat | xargs zypper in -y
 RUN mkdir -p /home/dev/work
 RUN useradd dev -u 1000 -d /home/dev
 RUN chown -R dev /home/dev
-#RUN rpm --import https://emacs_packages.microsoft.com/keys/microsoft.asc
 ########################################################################
 # Installing Emacs
-# RUN cd /home/dev/ && git clone --depth=1 https://git.savannah.gnu.org/git/emacs.git
-# ADD scripts/compile_emacs.sh /home/dev/emacs/
-# RUN /home/dev/emacs/compile_emacs.sh
-# USER root
-# RUN cd /home/dev/emacs/build && make install -j8
-# RUN rm -rf emacs
+RUN cd /home/dev/ && git clone --depth=1 https://git.savannah.gnu.org/git/emacs.git
+ADD scripts/compile_emacs.sh /home/dev/emacs/
+RUN /home/dev/emacs/compile_emacs.sh
+USER root
+RUN cd /home/dev/emacs/build && make install -j8
+RUN rm -rf emacs
 
 USER dev
 # ENTRYPOINT ["/root/.cabal/bin/pandoc"]
