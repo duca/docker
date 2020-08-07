@@ -1,0 +1,6 @@
+[submodule "tumble_emacs_cpp"]
+	path = tumble_emacs_cpp
+	url = git@github.com:duca/tumble_emacs_cpp.git
+[submodule "exec_pdflatex"]
+	path = exec_pdflatex
+	url = git@github.com:duca/exec_pdflatex.git
