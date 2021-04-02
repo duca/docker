@@ -1,0 +1,15 @@
+# not working
+version: "3.4"
+services:
+  felgo:
+    image: "ubuntu:felgo"
+    build:
+      context: .
+      network: host
+    ports:
+      - "9022:22"
+    expose:
+      - "22"
+    # volumes:
+    #     - ~/work:/home/centos/work
+    #     - /opt/Qt:/opt/Qt/
